@@ -9,7 +9,12 @@ try {
   core.setOutput("time", time);
   // Get the JSON webhook payload for the event that triggered the workflow
   const runId = JSON.stringify(github.context.runId, undefined, 2)
+  const repo = github.context.repo()
   console.log(`runId: ${runId}`);
+  console.log(`repo: ${repo}`);
+  console.log(`github.token: ${github.token}`);
+  console.log(`github.context.token: ${github.context.token}`);
+
 } catch (error) {
   core.setFailed(error.message);
 }
