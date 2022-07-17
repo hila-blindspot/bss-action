@@ -10,7 +10,7 @@ async function run() {
     const time = new Date().toTimeString();
     core.setOutput("time", time);
     // Get the JSON webhook payload for the event that triggered the workflow
-    const github = new GitHub(process.env.GITHUB_TOKEN);
+    // const github = new GitHub(process.env.GITHUB_TOKEN);
     const runId = JSON.stringify(github.context.runId, undefined, 2);
     const { owner, repo } = github.context.repo;
     console.log(`runId: ${runId}`);
