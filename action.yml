@@ -4,7 +4,11 @@ inputs:
   repo-name:  # id of input
     description: 'repo name'
     required: true
-    default: 'repo'
+    default: ${{ github.repository }}
+  github_token: 
+    description: 'github token'
+    required: true
+    default: ${{ github.token }}
 outputs:
   time: # id of output
     description: 'The time we greeted you'
