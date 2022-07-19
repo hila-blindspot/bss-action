@@ -9,6 +9,10 @@ inputs:
     description: 'github token'
     required: true
     default: ${{ github.token }}
+  bs_token: 
+    description: 'blindspot token, use GitHub Secret key -BS_TOKEN'
+    required: true
+
 outputs:
   time: # id of output
     description: 'The time we greeted you'
