@@ -13,7 +13,7 @@ async function run() {
     //response= api request to dashboard_api(runId, artNAme)
     console.log(`runId: ${runId}`);
     console.log(`repo: ${repo} owner ${owner}`);
-    console.log(`github_token: ${token}`);
+    console.log(`github_token: ${github_token}`);
     console.log(`bs_token: ${bs_token}`);
   } catch (error) {
     core.setFailed(error.message);
